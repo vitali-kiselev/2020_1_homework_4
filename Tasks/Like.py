@@ -19,6 +19,9 @@ likes("Alex", "Jacob", "Mark", "Max") -> "Alex, Jacob and 2 others like this"
 class MyClass:
 
     def likes(self, var: str) -> str:
+
+
+
         result = ''
 
         return result
