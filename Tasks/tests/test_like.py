@@ -1,7 +1,11 @@
 import unittest
-from ..Tasks import Like
+from coursepy.HW4.Tasks import Like
 
 class LikeTest(unittest.TestCase):
+    def test_like(self):
+        self.assertEqual()
+
+
 
 
 
