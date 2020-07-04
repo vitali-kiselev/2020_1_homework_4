@@ -19,10 +19,20 @@ likes("Alex", "Jacob", "Mark", "Max") -> "Alex, Jacob and 2 others like this"
 class MyClass:
 
     def likes(self, var: str) -> str:
+        if len(var) == 0:
+            result = "no one likes this"
+        if len(var) == 1:
+            result = (var[0], 'likes this')
+        if len(var) == 2:
+            result = (f'{var[0]} and {var[1]} like this')
+        if len(var) == 3:
+            result = (f'{var[0]}, {var[1]} and {var[2]} like this')
+        if len(var) > 3:
+            result = (f'{var[0]}, {var[1]} and {len(var)-2} others like this')
 
 
 
-        result = ''
+
 
         return result
 
@@ -32,6 +42,7 @@ if __name__ == '__main__':
     # Here we can make console input and check how function works
 
     var = input('Input names: ')
+    var = var.split(', ')
 
     result = MyClass().likes(var)
 
