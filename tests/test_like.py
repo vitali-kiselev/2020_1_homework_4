@@ -1,4 +1,8 @@
 import unittest
+from ..Tasks import Like
+
+class LikeTest(unittest.TestCase):
+
 
 
 
