@@ -1,5 +1,5 @@
 import unittest
-from coursepy.HW4.Tasks import Like
+from coursepy.HW4.Tasks.Like import MyClass
 
 class LikeTest(unittest.TestCase):
     def setUp(self):
@@ -7,7 +7,7 @@ class LikeTest(unittest.TestCase):
     def tearDown(self):
         pass
     def test_like(self):
-        self.assertEqual()
+        self.assertEqual(MyClass().likes('Alex'), 'Alex' 'likes this')
 
 
 
