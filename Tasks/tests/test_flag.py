@@ -7,9 +7,14 @@ class LikeTest(unittest.TestCase):
         pass
     def tearDown(self):
         pass
+    def test_flag(self):
+        self.var = '5'
+        self.assertEquals(MyClass().flags(self.var), )
+
+
 
     def test_flags_error(self):
-        self.var = '14'
+        self.var = '100'
         self.assertEquals(MyClass().flags(self.var), 'Error')
 
 
