@@ -6,11 +6,12 @@ class LikeTest(unittest.TestCase):
         pass
     def tearDown(self):
         pass
-    def test_like(self, var):
-        self.assertEqual(MyClass().likes(f'{len(var)==1}'), f'{var[0]} likes this')
-        self.assertEqual(MyClass().likes(f'{len(var) == 2}'), f'{var[0]} and {var[1]} like this')
-        self.assertEqual(MyClass().likes(f'{len(var) == 3}'), f'{var[0]}, {var[1]} and {var[2]} like this')
-        self.assertEqual(MyClass().likes(f'{len(var) > 3}'), f'{var[0]}, {var[1]} and {len(var)-2} others like this')
+    def test_like(self):
+        self.var = ['Valera', 'Kolya', 'Vova']
+        self.assertEqual(MyClass().likes(f'{len(self.var)==1}'), f'{self.var[0]} likes this')
+        self.assertEqual(MyClass().likes(f'{len(self.var) == 2}'), f'{self.var[0]} and {self.var[1]} like this')
+        self.assertEqual(MyClass().likes(f'{len(self.var) == 3}'), f'{self.var[0]}, {self.var[1]} and {self.var[2]} like this')
+        self.assertEqual(MyClass().likes(f'{len(self.var) > 3}'), f'{self.var[0]}, {self.var[1]} and {len(self.var)-2} others like this')
 
 
 

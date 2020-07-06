@@ -30,19 +30,23 @@ class MyClass:
 
     def flags(self, var):
         var = int(var)
+        if var in range(1, 10):
 
-        for i in range(var):
-            print("+___", end=" ")
-        print()
-        for i in range(var):
-            print("|%s /" % (i + 1), end=" ")
-        print()
-        for i in range(var):
-            print("|__\\", end=" ")
-        print()
-        for i in range(var):
-            print("|   ", end=" ")
-        print()
+            for i in range(var):
+                print("+___", end=" ")
+            print()
+            for i in range(var):
+                print("|%s /" % (i + 1), end=" ")
+            print()
+            for i in range(var):
+                print("|__\\", end=" ")
+            print()
+            for i in range(var):
+                print("|   ", end=" ")
+            print()
+        elif var not in range(1, 10):
+            print('no number')
+
 
 
         return
